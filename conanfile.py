@@ -18,6 +18,7 @@ class Includify(ConanFile):
     generators = "cmake"
     build_requires = [
         "catch2/[~=2.13]",
+        "cmake/[~=3.21]",
         "fmt/[~=8.0]",
         "lyra/[~=1.5]",
     ]

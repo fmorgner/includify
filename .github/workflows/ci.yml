@@ -20,9 +20,6 @@ jobs:
           path: ~/.conan/data
           key: conan-package-cache-${{ hashFiles('conanfile.py') }}
 
-      - name: Install CMake
-        uses: lukka/get-cmake@latest
-
       - name: Install Python
         uses: actions/setup-python@v2
         with:
