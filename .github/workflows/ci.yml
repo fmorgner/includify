@@ -41,4 +41,10 @@ jobs:
       - name: Package Build Output
         run: |
           conan package --build-folder=build .
- 
+
+      - name: Archive Package
+        uses: actions/upload-artifact@v2
+        with:
+          name: package
+          path: |
+            build/package
