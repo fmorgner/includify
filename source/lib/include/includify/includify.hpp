@@ -8,10 +8,10 @@ namespace includify
 {
 
   /**
-   * @brief Generate a defintio
+   * @brief Generate a definition for a classic (or C-like) string
    * 
-   * @param text 
-   * @return std::string 
+   * @param text The text data to generate an instance for
+   * @return std::string the generated string
    */
   auto as_classic_string(std::string_view text) -> std::string;
 

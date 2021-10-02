@@ -42,6 +42,10 @@ target_compile_options("library" PRIVATE
     $<$<CXX_COMPILER_ID:Clang,GNU>:-pedantic-errors>
 )
 
+target_link_libraries("library" PUBLIC
+    "CONAN_PKG::fmt"
+)
+
 set_target_properties("library" PROPERTIES
     "CXX_STANDARD_REQUIRED" YES
     "CXX_EXTENSIONS" OFF
@@ -80,6 +84,10 @@ file(GLOB TEST_SOURCES RELATIVE "${PROJECT_SOURCE_DIR}" CONFIGURE_DEPENDS "test/
 
 add_executable("tests"
     ${TEST_SOURCES}
+)
+
+target_include_directories("tests" PRIVATE
+    "${PROJECT_SOURCE_DIR}/test/include"
 )
 
 target_link_libraries("tests" PRIVATE
