@@ -8,8 +8,8 @@ jobs:
     name: Build Package
     runs-on: ubuntu-latest
     env:
-      CC: gcc-10
-      CXX: g++-10
+      CC: gcc-11
+      CXX: g++-11
     steps:
       - name: Download Source
         uses: actions/checkout@v2
