@@ -1,0 +1,20 @@
+{
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "modificationsIfAvailable",
+    },
+
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.formatting": "clangFormat",
+
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--folding-ranges"
+    ],
+    "clangd.semanticHighlighting": true,
+    "clangd.onConfigChanged": "restart"
+}
