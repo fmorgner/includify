@@ -1,1 +1,9 @@
 /build
+
+# Python
+.venv/
+__pycache__/
+
+# MacOS
+.DS_Store
+

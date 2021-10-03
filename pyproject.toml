@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "tools"
+version = "1.0.0"
+description = "Supporting tools for Conan packages."
+authors = [
+    "Felix Morgner <felix.morgner@gmail.com>",
+    "Hansruedi Patzen <hp@revy.ch>"
+]
+license = "BSD-3-Clause"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+conan = "^1.40.3"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+isort = "^5.9.3"
+
+[tool.poetry.scripts]
+conan-install = "tools.scripts:install"
+conan-build = "tools.scripts:build"
+conan-package = "tools.scripts:package"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
